@@ -3,6 +3,7 @@ import imageAPI from "./API/api";
 import SearchBar from "./components/SearchBar";
 import { useState } from "react";
 import ShowList from "./components/ShowList";
+import './App.css'
 
 function App() {
     const [images, setImages] = useState([]);
@@ -12,8 +13,8 @@ function App() {
     };
 
     return (
-        <div>
-            <h1>WElcome to generate images based on Unsplash API</h1>
+        <div className="dev-app">
+            <h1>Welcome to generate images based on Unsplash API</h1>
             <SearchBar onSubmit={handleSubmit} />
             <ShowList images={images} />
         </div>
